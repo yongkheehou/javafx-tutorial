@@ -15,15 +15,14 @@ public class Main extends Application {
 
     @Override
     public void start(Stage stage) {
-        try {
-            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/view/MainWindow.fxml"));
-            AnchorPane ap = fxmlLoader.load();
-            Scene scene = new Scene(ap);
-            stage.setScene(scene);
-            fxmlLoader.<MainWindow>getController().setDuke(duke);  // inject the Duke instance
-            stage.show();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+//            FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/view/MainWindow.fxml"));
+//            AnchorPane ap = fxmlLoader.load();
+//            Scene scene = new Scene(ap);
+//            fxmlLoader.<MainWindow>getController().setDuke(duke);  // inject the Duke instance
+        MainWindow mainWindow = new MainWindow();
+        Scene scene = new Scene(mainWindow);
+        stage.setScene(scene);
+        mainWindow.setDuke(duke);
+        stage.show();
     }
 }
