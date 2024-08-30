@@ -21,8 +21,4 @@ public class Main extends Application {
 
         mainWindow.getScene().getStylesheets().addAll(rootCss, scrollPaneCss, vboxCss, textFieldCss, buttonCss);
     }
-
-    public static void main(String[] args) {
-        launch(args);
-    }
 }
